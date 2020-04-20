@@ -25,9 +25,6 @@ func init() {
 	fmt.Println("task2")
 }
 func main() {
-	// Даны катеты прямоугольного треугольника.
-	// Найти его площадь, периметр и гипотенузу.
-	// Используйте тип данных float64 и функции из пакета math.
 	var cathetA float64 = 3
 	var cathetB float64 = 4
 
