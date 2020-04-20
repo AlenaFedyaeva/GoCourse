@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 )
 
 func main() {
@@ -14,11 +15,15 @@ func main() {
 
 	fmt.Println("Программа для конвертации рублей в доллары")
 	fmt.Println("Введите сумму в рублях:")
-	fmt.Scanf("%f", &rubles)
+	e,err:=fmt.Scanf("%f", &rubles)
+	if err != nil {
+        fmt.Fprintln(os.Stderr, err)
+        return
+    }
 	fmt.Println("Вы ввели: ",rubles)
 	fmt.Println("Расчитываем по курсу $:",course)
 	dollars := rubles/course;
 	fmt.Println("Итого долларов:", dollars)
-	fmt.Println("The end")
+	fmt.Println("The end",e)
 
 }
