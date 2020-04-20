@@ -35,7 +35,7 @@ func main() {
 	fmt.Println("Значения катетов ", cathetA, cathetB)
 	
 	fmt.Println("Hypotenuse",hypotenuse(cathetA,cathetB))
-	fmt.Println("perimeter",perimeter(cathetA,cathetB))
-	fmt.Println("area",area(cathetA,cathetB))
+	fmt.Println("Perimeter",perimeter(cathetA,cathetB))
+	fmt.Println("Area",area(cathetA,cathetB))
 	fmt.Println("The end")
 }
