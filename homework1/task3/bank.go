@@ -7,7 +7,7 @@ import (
 )
 
 func banc(bankDeposit float64, percent float64){
-	years:=5
+	const years int =5
 	fmt.Println("Программа для определения суммы вклада через 5 лет")
 	fmt.Println("Введите сумму вклада рублях:")
 	_,err:=fmt.Scanf("%f", &bankDeposit)
