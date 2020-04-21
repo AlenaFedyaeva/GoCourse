@@ -11,7 +11,7 @@ func main() {
 
 	fmt.Println("Программа для конвертации рублей в доллары")
 	fmt.Println("Введите сумму в рублях:")
-	e,err:=fmt.Scanf("%f", &rubles)
+	_,err:=fmt.Scanf("%f", &rubles)
 	if err != nil {
         fmt.Fprintln(os.Stderr, err)
         return
@@ -20,6 +20,6 @@ func main() {
 	fmt.Println("Расчитываем по курсу $:",course)
 	dollars := rubles/course;
 	fmt.Println("Итого долларов:", dollars)
-	fmt.Println("The end",e)
+	fmt.Println("The end")
 
 }
