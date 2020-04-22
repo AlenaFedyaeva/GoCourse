@@ -1,9 +1,8 @@
 package main
 
 import (
-	"fmt"
-	// "os"
 	"GoCource/homework2/packagehw2"
+	"fmt"
 )
 func init ()  {
 	fmt.Println("Homework 2")
@@ -11,8 +10,6 @@ func init ()  {
 func main() {
     packagehw2.Task1()
 	packagehw2.Task2()
-
-
-	fmt.Println("The end")
-
+	packagehw2.Task3()
+	fmt.Println("\nThe end")
 }

@@ -1,6 +1,7 @@
 package packagehw2
-import(
+import (
 	"fmt"
+	"math/big"
 	"os"
 )
 //Task1 - проверяем введеное число на четность
@@ -27,6 +28,19 @@ func Task2()  {
 	fmt.Println("Вы ввели: ",number)
 	fmt.Println("Проверяем число ... ", DevisionOn3(number))
 }
+//Task3 - выводим на экран 100 первых чисел Фибоначчи, начиная от 0. 
+func Task3(){
+	const count int=100
+	fibNumber :=big.NewInt(1)
+	fibNumberPrevious :=big.NewInt(0)
+	for i := 0; i < count; i++ {
+		fibNumber.Add(fibNumber,fibNumberPrevious)
+		fibNumber,fibNumberPrevious=fibNumberPrevious,fibNumber
+		fmt.Print(" ,",fibNumber)
+	}
+}
+
+
 //DevisionOn3 -  функция, которая определяет, 
 //делится ли число без остатка на 3
 func DevisionOn3(number int) string{
