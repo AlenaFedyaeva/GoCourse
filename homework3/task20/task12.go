@@ -4,7 +4,7 @@ import (
 )
 //Task12 - Задание 1 & 2
 func Task12()  {
-	fmt.Println("Задание 1 & 2")
+	fmt.Println("Task 1 & 2")
 	//1) Задаем значения сразу
 	car1:=Car{"Volvo",1998,true,false,150,50}
 	car1.PrintCarInfo()
