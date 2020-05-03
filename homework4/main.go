@@ -2,6 +2,7 @@ package main
 
 import (
 	"GoCource/homework4/task1"
+	"GoCource/homework4/task2"
 	"fmt"
 )
 
@@ -11,6 +12,7 @@ func init ()  {
 
 func main() {
 	task1.Task1()
-	
+	task2.Task2()
+
 	fmt.Println("\nThe end")
 }
