@@ -30,14 +30,14 @@ func WriteCsv() {
 	csvWriter.Flush()
 	err= csvWriter.Error()
 	if err != nil {
-  	fmt.Println("an error occurred during the flush")
+  		fmt.Println("an error occurred during the flush")
 	}
 }
 
 
 //ReadCsv - example how to read from csv file
 func ReadCsv() {
-	csvFile, err := os.Open("tmp.csv")
+	csvFile, err := os.Open(csvFileName)
 	if err != nil {
 		panic(err)
 	}

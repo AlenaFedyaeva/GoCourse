@@ -2,8 +2,10 @@ package main
 
 import (
 	// "GoCource/homework5/task2"
-	"GoCource/homework5/task3"
+	// "GoCource/homework5/task3"
+	"flag"
 	"fmt"
+	"os"
 )
 
 func Extend(slice []int, element int) []int {
@@ -20,12 +22,44 @@ func Extend(slice []int, element int) []int {
 	slice[n] = element
 	return slice
 }
+//CpUtil - утилита копирования файла
+func CpUtil()  {
+	argsWithProg := os.Args
+    argsWithoutProg := os.Args[1:]
+
+    arg := os.Args[0]
+
+	if(len(argsWithoutProg)==0){
+		fmt.Println("cp: missing file operand\nTry 'cp --help' for more information.")
+		return
+	}
+
+    fmt.Println("withpro",argsWithProg)
+    fmt.Println("argsWithout",argsWithoutProg)
+    fmt.Println("arg",arg)
+
+	
+
+	srcPtr := flag.String("src", "", "file src name")
+    dstPtr := flag.String("dst", "", "file dst name")
+
+    flag.Parse()
+
+    fmt.Println("src:", *srcPtr)
+    fmt.Println("dst:", *dstPtr)
+  
+    fmt.Println("tail:", flag.Args())
+
+
+}
 
 func main() {
 	// task2.Task2()
-	task3.Task3()
+	// task3.Task3()
 
-	
+	CpUtil()
+
+
 	fmt.Println("\nThe end")
 
 }
