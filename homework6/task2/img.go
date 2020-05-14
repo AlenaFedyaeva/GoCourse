@@ -28,5 +28,6 @@ func DrawLines()  {
 			img.Set(y, x, color.Black)
 		}
 	}
+	//Сохраняем в файл
     png.Encode(file, img)
 }
