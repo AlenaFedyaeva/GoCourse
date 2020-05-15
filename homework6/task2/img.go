@@ -31,3 +31,4 @@ func DrawLines()  {
 	//Сохраняем в файл
     png.Encode(file, img)
 }
+
