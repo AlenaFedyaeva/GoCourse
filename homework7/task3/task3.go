@@ -54,4 +54,5 @@ func main() {
 	go exit(quit)
 	go tcpServer(quit)
 	<-quit
+	close(quit)
 }

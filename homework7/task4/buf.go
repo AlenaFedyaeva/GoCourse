@@ -27,8 +27,9 @@ func mirroredQuery() string {
     }
     // ожидаем, пока все запросы не будут завершены
     wg.Wait()
-	
-	return <-responses // возврат самого быстрого ответа
+	fast:=<-responses
+	close(responses)
+	return fast// возврат самого быстрого ответа
 }
 
 func request(hostname string) (string) {
