@@ -13,7 +13,7 @@ func mirroredQuery() string {
         "http://github.com",
 		"http://yandex.ru",
 		"https://geekbrains.ru",
-        // "http://google.com",
+        "http://google.com",
 	}
 	responses := make(chan string, 3)
 	for _, url := range urls {
