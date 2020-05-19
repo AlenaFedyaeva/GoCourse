@@ -28,7 +28,7 @@ func exit(quit chan struct{}) { //, wg *sync.WaitGroup) {
 		fmt.Scanln(&str)
 		if str == "exit" {
 			fmt.Println("Bye!")
-			quit <- struct{}{} // send sum to c
+			quit <- struct{}{} 
 			return
 		}
 	}
