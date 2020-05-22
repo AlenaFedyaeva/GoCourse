@@ -1,0 +1,36 @@
+Письменный ответ на вопрос:
+" Исследуйте работу последовательного и параллельного сканера веб-сайтов, 
+задав большое (не менее 10) количество URL. Какие выводы можно сделать?"
+
+Запустим обе программы:
+$ go run task1/scanner.go  http://google.com http://mail.ru http://vk.com  http://google.com http://mail.ru http://vk.com http://google.com http://mail.ru http://vk.com   http://google.com http://mail.ru http://vk.com
+1.32s   15874 http://google.com
+1.71s  307673 http://mail.ru
+2.65s   11203 http://vk.com
+0.44s   15853 http://google.com
+0.87s  307715 http://mail.ru
+0.88s   11202 http://vk.com
+0.48s   15884 http://google.com
+0.82s  307806 http://mail.ru
+1.27s   11203 http://vk.com
+0.40s   15910 http://google.com
+0.95s  307772 http://mail.ru
+1.41s   11203 http://vk.com
+13.20s elapsed
+$ go run task1/parallelscanner.go  http://google.com http://mail.ru http://vk.com  http://google.com http://mail.ru http://vk.com http://google.com http://mail.ru http://vk.com   http://google.com http://mail.ru http://vk.com
+0.93s   15891 http://google.com
+0.96s   15889 http://google.com
+0.97s   15852 http://google.com
+0.99s   15890 http://google.com
+1.88s   11202 http://vk.com
+1.88s   11203 http://vk.com
+1.88s   11203 http://vk.com
+1.88s   11203 http://vk.com
+2.53s  307898 http://mail.ru
+2.63s  307807 http://mail.ru
+2.93s  307704 http://mail.ru
+8.73s  307655 http://mail.ru
+8.73s elapsed
+
+
+Из этого можно сделать вывод, что при увеличении количества URL больше 10, параллельный сканер работает быстрее. 
