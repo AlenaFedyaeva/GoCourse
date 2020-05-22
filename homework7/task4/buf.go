@@ -33,10 +33,10 @@ func mirroredQuery() string {
 }
 
 func request(hostname string) (string) {
-	ServeHTTP(hostname)
+	MakeRequest(hostname)
 	return hostname
 }
-func ServeHTTP(url string) bool {
+func MakeRequest(url string) bool {
 	fmt.Println("serve ",url)
 	response, err := http.Get(url)
 	if err != nil {

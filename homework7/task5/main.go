@@ -32,12 +32,13 @@ func (a *auto) race(raceRez chan string,wg *sync.WaitGroup) {
 	a.ridesTrack()
 	tEnd := time.Now().Sub(tStart)
 	raceRez <- a.name
-	fmt.Println("run ", a.name, "time track ", a.trackTime,"time rez ", tEnd)
+	fmt.Println("race ", a.name, "time track ", a.trackTime,"time rez ", tEnd)
 }
 var names = []string{"ford", "bmv", "subaru","mazda"}
 var autoArr []auto 
 
 func init(){
+	rand.Seed(time.Now().UTC().UnixNano())
 	fmt.Println("init cars")
 	for _, name := range names {
 		var a auto

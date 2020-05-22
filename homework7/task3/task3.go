@@ -50,7 +50,6 @@ func tcpServer(quit chan struct{}) {
 
 func main() {
 	quit := make(chan struct{})
-	defer close(quit)
 	go exit(quit)
 	go tcpServer(quit)
 	<-quit
