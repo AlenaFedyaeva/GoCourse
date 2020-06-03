@@ -47,5 +47,3 @@ https://go-tour-ru-ru.appspot.com/list - упражнения на овладе�
 
 34) https://golang.org/ref/mem - рутины
 
-
-

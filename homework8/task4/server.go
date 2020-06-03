@@ -97,7 +97,6 @@ func handleConn(conn net.Conn) {
     go clientWriter(conn, ch)
 
 	name:=""
-
 	input := bufio.NewScanner(conn)
 	b:=true
     for input.Scan() {
