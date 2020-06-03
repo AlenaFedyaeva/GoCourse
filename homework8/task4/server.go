@@ -96,7 +96,7 @@ func handleConn(conn net.Conn) {
     ch := make(chan string)
     go clientWriter(conn, ch)
 
-	name:="def"
+	name:=""
 
 	input := bufio.NewScanner(conn)
 	b:=true
